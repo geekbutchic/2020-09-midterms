@@ -1,12 +1,17 @@
 // Your code below.
 function isValidPassword(str) {
+  // should I Not go to lunch 
   if (str.includes('.') || (str.includes(' ')) || (str.length < 12)) {
-      return false;
+    return false;
   } else {
-      return true;
+    return true;
   }
 }
 
+const isValidPasswordAlt = function (password) {
+  return !password.includes('.') && password.includes(' ') || password.length < 12;
+  // like asking should I got lunch 
+}
 // returns false = no spaces 
 // returns false = no periods 
 // returns false = 12 characters long 
@@ -14,26 +19,43 @@ function isValidPassword(str) {
 const onlyCs = function (grades) {
   const newGrades = [];
   for (const grade of grades) {
-      if (grade < 79 && grade < 70 ) {
-          newGrades.push(grade);
-      }
-  }  
+    if (grade >= 70 && grade <= 79) {
+      newGrades.push(grade);
+    }
+  }
   return newGrades;
 }
 
 // returns grade between 70 and 79
 
 const countBs = function (grades) {
-  const newGrades = [];
+  let count = 0;
   for (const grade of grades) {
-    if (grade < 80) {
-      return;
-    } 
-  } if (grade > 89) {
-    return;
+    if (grade >= 80 && grade <= 89) {
+      count++;
+    }
   }
-  return newGrades;
+  return count;
 }
+// manual looping version
+// up the count 
+
+const lastIndexOfPunctuation = function (str) {
+  for (let i = str.length - 1; i >= 0, i--) {
+    const char = str[i];
+    if (char === '.' || char === '?' || char === '!') {
+      return i;
+    }
+  }
+  return -1;
+}
+
+const lastIndexOfPunctuation 
+
+
+
+
+
 
 
 
