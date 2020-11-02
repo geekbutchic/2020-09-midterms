@@ -21,7 +21,23 @@ const onlyCs = function (grades) {
   return newGrades;
 }
 
-// try array.filter(function(a){return a>=3&&a<=6}). for [1,2,3,3.1,4,6.1], it will return [3,3.1,4]
+// returns grade between 70 and 79
+
+const countBs = function (grades) {
+  const newGrades = [];
+  for (const grade of grades) {
+    if (grade < 80) {
+      return;
+    } 
+  } if (grade > 89) {
+    return;
+  }
+  return newGrades;
+}
+
+
+
+
 
 
 // Our code below. Don't touch!
